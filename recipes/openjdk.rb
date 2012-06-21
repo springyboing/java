@@ -86,9 +86,9 @@ pkgs.each do |pkg|
   end
 end
 
-# file "/etc/profile.d/jdk.sh" do
-#   content <<-EOS
-#     export JAVA_HOME=#{node['java']["java_home"]}
-#   EOS
-#   mode 0755
-# end
+file "/etc/profile.d/jdk.sh" do
+  content <<-EOS
+    export JAVA_HOME=#{node['java']["java_home"]}
+  EOS
+  mode 0755
+end
